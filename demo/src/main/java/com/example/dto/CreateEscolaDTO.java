@@ -6,7 +6,6 @@ public class CreateEscolaDTO {
     private String cnpj;
     private String localizacao;
     private String telefone;
-    private int idEscola;
 
     public String getNome() {
         return nomeEscola;
@@ -54,13 +53,5 @@ public class CreateEscolaDTO {
 
     public void setNomeEscola(String nomeEscola) {
         this.nomeEscola = nomeEscola;
-    }
-
-    public int getIdEscola() {
-        return idEscola;
-    }
-
-    public void setIdEscola(int idEscola) {
-        this.idEscola = idEscola;
     }
 }

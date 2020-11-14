@@ -6,19 +6,10 @@ public class CreateCursoDTO {
     private int quantidadeDeAulas;
     private float duracao;
     private String descricao;
-    private int idCurso;
     private int idEscola;
 
     public String getNomeCurso() {
         return nomeCurso;
-    }
-
-    public int getIdCurso() {
-        return idCurso;
-    }
-
-    public void setIdCurso(int idCurso) {
-        this.idCurso = idCurso;
     }
 
     public void setNomeCurso(String nomeCurso) {

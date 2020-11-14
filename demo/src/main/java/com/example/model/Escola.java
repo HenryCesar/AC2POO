@@ -87,6 +87,7 @@ public class Escola {
         dto.setQuantidadeDeAlunos(escola.getQuantidadeDeAlunos());
         dto.setLocalizacao(escola.getLocalizacao());
         dto.setTelefone(escola.getTelefone());
+        dto.setIdEscola(escola.getIdEscola());
 
         return dto;
     }

@@ -72,6 +72,7 @@ public class Curso {
         dto.setQuantidadeDeAlunos(curso.getQuantidadeDeAlunos());
         dto.setQuantidadeDeAulas(curso.getQuantidadeDeAulas());
         dto.setEscolaDTO(Escola.toDTO(curso.getEscola()));
+        dto.setIdCurso(curso.getIdCurso());
 
         return dto;
     }

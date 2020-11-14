@@ -56,20 +56,21 @@ public class EscolaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> removerEscola(@PathVariable int id){
+    public ResponseEntity<Void> removerEscola(@PathVariable int id) {
         escolaService.removerEscola(id);
         return ResponseEntity.ok().build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> atualizarDados(@PathVariable int id, @RequestBody UpdateEscolaDTO body){
+    public ResponseEntity<Void> atualizarDados(@PathVariable int id, @RequestBody UpdateEscolaDTO body) {
         escolaService.alterarDadosEscola(body, id);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{id}/cursos")
-    public ResponseEntity<List<ReturnCursoDTO>> listarCursos(@PathVariable int id){
-        return ResponseEntity.ok(escolaService.listarCursos(id).stream().map(curso -> Curso.toDTO(curso)).collect(Collectors.toList()));
+    public ResponseEntity<List<ReturnCursoDTO>> listarCursos(@PathVariable int id) {
+        return ResponseEntity.ok(
+                escolaService.listarCursos(id).stream().map(curso -> Curso.toDTO(curso)).collect(Collectors.toList()));
     }
 
 }

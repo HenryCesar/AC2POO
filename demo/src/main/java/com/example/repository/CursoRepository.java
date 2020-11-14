@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CursoRepository {
-    private int idCurso = 0;
+    private static int idCurso = 0;
     private List<Curso> cursos;
 
     public CursoRepository(){

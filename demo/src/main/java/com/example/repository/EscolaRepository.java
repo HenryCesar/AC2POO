@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class EscolaRepository {
-    private int idAtual = 0;
+    private static int idAtual = 0;
     private List<Escola> escolas;
 
     public EscolaRepository(){
@@ -30,6 +30,7 @@ public class EscolaRepository {
     public Escola criar(CreateEscolaDTO escolaDTO) {
         Escola entidade = Escola.fromDTO(escolaDTO);
         entidade.setIdEscola(idAtual++);
+        System.out.println(entidade.getIdEscola());
         escolas.add(entidade);
         return entidade;
     }
