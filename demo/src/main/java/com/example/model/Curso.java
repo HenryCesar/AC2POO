@@ -10,6 +10,7 @@ public class Curso {
     private float duracao;
     private String descricao;
     private int idCurso;
+    private Escola escola;
 
     public String getNomeCurso() {
         return nomeCurso;
@@ -70,6 +71,7 @@ public class Curso {
         dto.setDuracao(curso.getDuracao());
         dto.setQuantidadeDeAlunos(curso.getQuantidadeDeAlunos());
         dto.setQuantidadeDeAulas(curso.getQuantidadeDeAulas());
+        dto.setEscolaDTO(Escola.toDTO(curso.getEscola()));
 
         return dto;
     }
@@ -80,5 +82,13 @@ public class Curso {
 
     public void setIdCurso(int idCurso) {
         this.idCurso = idCurso;
+    }
+
+    public Escola getEscola() {
+        return escola;
+    }
+
+    public void setEscola(Escola escola) {
+        this.escola = escola;
     }
 }
