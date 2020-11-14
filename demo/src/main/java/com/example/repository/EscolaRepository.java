@@ -18,6 +18,10 @@ public class EscolaRepository {
     private int idAtual = 0;
     private List<Escola> escolas;
 
+    public EscolaRepository(){
+        
+    }
+
     @PostConstruct
     private void start() {
         escolas = new ArrayList<Escola>();

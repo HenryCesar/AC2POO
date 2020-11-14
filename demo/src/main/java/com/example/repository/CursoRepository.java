@@ -18,6 +18,10 @@ public class CursoRepository {
     private int idCurso = 0;
     private List<Curso> cursos;
 
+    public CursoRepository(){
+
+    }
+    
     @PostConstruct
     private void start() {
         cursos = new ArrayList<Curso>();

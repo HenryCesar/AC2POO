@@ -22,6 +22,10 @@ public class CursoService {
     @Autowired
     public EscolaService escolaService;
 
+    public CursoService(){
+        
+    }
+
     public List<Curso> listarTodos(){
         return repository.listar(curso -> true);
     }
