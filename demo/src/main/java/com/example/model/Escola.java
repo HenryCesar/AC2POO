@@ -78,8 +78,8 @@ public class Escola {
 
         return entidade;
     }
-    
-    public static ReturnEscolaDTO toDTO(Escola escola){
+
+    public static ReturnEscolaDTO toDTO(Escola escola) {
         ReturnEscolaDTO dto = new ReturnEscolaDTO();
 
         dto.setNome(escola.getNome());
